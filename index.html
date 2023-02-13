@@ -36,20 +36,30 @@
     </div>
 
     <div class="container">
-      <form class="form-inline w-50 mx-auto">
-        <div class="form-group">
-          <label for="locationInput">Location</label>
-          <input type="text" class="form-control" id="locationInput" placeholder="Courtenay">
-        </div>     
-        <button type="submit" class="btn btn-dark">Search</button>
-      </form>
+      <div class="card border-primary mb-3" id="controlsCard">
+        <div class="card-header">Location Search</div>
+        <div class="card-body">
+          <form>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="searchType" id="address" value="option1">
+              <label class="form-check-label" for="address">Address</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="searchType" id="cities" value="option2" checked>
+              <label class="form-check-label" for="cities">Cities</label>
+            </div><br>
+            <label for="locationInput">Location</label>
+            <input type="text" class="form-control" id="locationInput" placeholder="Courtenay">
+          </form>
+        </div>
+      </div>
       <div id="map" class="mx-auto"></div>
     </div>
 
     
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVF_IKXu3VYMlQMs-UtOoJ3ZdlqnclN8A&callback=mapStart&v=weekly"
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVF_IKXu3VYMlQMs-UtOoJ3ZdlqnclN8A&callback=mapStart&libraries=places&v=weekly"
       defer
-    ></script>
+    ></script> -->
 </body>
 </html>

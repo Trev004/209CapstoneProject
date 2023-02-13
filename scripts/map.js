@@ -4,7 +4,8 @@ function mapStart() {
     const CR = {lat: 50.02554744197325, lng: -125.25163846178474};
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom:15,
-        center: CR
+        center: CR,
+        mapTypeControl: false,
     });
     const marker = new google.maps.Marker({
         position: CR,

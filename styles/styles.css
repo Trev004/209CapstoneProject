@@ -6,4 +6,8 @@
   height: 600px;
   width: 600px;
 }
+
+#controlsCard {
+  max-width: 15rem;
+}
 /*# sourceMappingURL=styles.css.map */
