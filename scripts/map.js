@@ -22,6 +22,22 @@ function mapStart() {
         position: {lat: 50.025, lng: -125.251},
         map: map,
     });
+
+    autocomplete.addListener("place_changed", () =>{
+        infoWindow.close();
+        const placeResult = autocomplete.getPlace();
+
+        if (placeResult.geometry == null || placeResult.geometry.location == null){
+            window.alert("Sorry, we couldn't find anything based on '" + placeResult.name + "'");
+            return;
+        }
+        if (placeResult.geometry.viewport) {
+            map.fitBounds(placeResult.geometry.viewport);
+        } else {
+            map.setCenter(placeResult.geometry.viewport);
+            map.setZoom(15);
+        }
+    });
 }
 
 window.mapStart = mapStart;
