@@ -1,4 +1,9 @@
 .bg-lightgreen {
   background: #b2f8b2;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+}
 /*# sourceMappingURL=styles.css.map */
