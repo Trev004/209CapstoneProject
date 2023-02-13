@@ -41,11 +41,11 @@
         <div class="card-body">
           <form>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="searchType" id="address" value="option1">
+              <input class="form-check-input" type="radio" name="searchType" id="address" value="address">
               <label class="form-check-label" for="address">Address</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="searchType" id="cities" value="option2" checked>
+              <input class="form-check-input" type="radio" name="searchType" id="cities" value="city" checked>
               <label class="form-check-label" for="cities">Cities</label>
             </div><br>
             <label for="locationInput">Location</label>
@@ -54,6 +54,10 @@
         </div>
       </div>
       <div id="map" class="mx-auto"></div>
+      <div id="autocomplete-content">
+        <span id="place-name" class="title"></span><br>
+        <span id="place-address"></span>
+      </div>
     </div>
 
     
