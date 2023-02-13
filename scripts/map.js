@@ -25,10 +25,12 @@ function mapStart() {
 
     autocomplete.addListener("place_changed", () =>{
         infoWindow.close();
+        marker.setVisible(false);
+
         const placeResult = autocomplete.getPlace();
 
         if (placeResult.geometry == null || placeResult.geometry.location == null){
-            window.alert("Sorry, we couldn't find anything based on '" + placeResult.name + "'");
+            window.alert("Sorry, we couldn't find anything based on '" + placeResult.name + "' \nPlease make sure you're clicking on the auto-completed results!");
             return;
         }
         if (placeResult.geometry.viewport) {
@@ -37,6 +39,8 @@ function mapStart() {
             map.setCenter(placeResult.geometry.viewport);
             map.setZoom(15);
         }
+        marker.setPosition(placeResult.geometry.location);
+        marker.setVisible(true);
     });
 }
 
