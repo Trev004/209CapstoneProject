@@ -15,8 +15,8 @@ function mapStart() {
     autocomplete.bindTo("bounds", map);
 
     const infoWindow = new google.maps.InfoWindow();
-    const infoWindowContent = document.getElementById("autocomplete-content")
-    infoWindow.setContent(infoWindowContent)
+    const infoWindowContent = document.getElementById("autocomplete-content");
+    infoWindow.setContent(infoWindowContent);
 
     const marker = new google.maps.Marker({
         position: {lat: 50.025, lng: -125.251},
