@@ -1,7 +1,15 @@
 // #1. Built with help from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
 // #2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
 // #3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
-
+/*
+    Made by Trevor Jacob.
+    The 3 Sources above were mainly used as a way for me to figure out *how* the google API works. 
+    An example of my workflow would be, seeing the tutorial, seeing the end result, deciding whether I could use parts
+    of the tutorial, then reading through to see what parts did what function, then adding and adapting what parts I needed.
+    A good example of this is with the 2nd citation, (#2.) the original tutorial had many extra lines and functions
+    that I didn't need for mine, so instead of following it directly, I used it to learn what lines performed what function, 
+    adapted and added to better suit my needs.
+*/
 function mapStart() {
     // #1.
     const map = new google.maps.Map(document.getElementById("map"), {
