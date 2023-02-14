@@ -9,8 +9,13 @@ function mapStart() {
         center: {lat: 50.025, lng: -125.251},
         mapTypeControl: false,
     });
+
     const cardControls = document.getElementById("controlsCard");
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(cardControls);
+    if (window.innerWidth >= 700) {
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(cardControls);
+    } else{
+        cardControls.classList.add("mx-auto", "mb-5");
+    }
 
     const locationInput = document.getElementById("locationInput");
     const autocomplete = new google.maps.places.Autocomplete(locationInput);
