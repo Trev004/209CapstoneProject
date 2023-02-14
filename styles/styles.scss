@@ -3,6 +3,12 @@
 .bg-lightgreen{
     background: $green-light;
 }
+.btn-branding{
+    background: $green-light;
+    &:hover{
+        background: $green-dark;
+    }
+}
 
 #map{
     height: 600px;
