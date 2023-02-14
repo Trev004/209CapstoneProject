@@ -1,7 +1,9 @@
-// Built with help from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
-// With the searching based on :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
+// #1. Built with help from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
+// #2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
+// #3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
 
 function mapStart() {
+    // #1.
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom:15,
         center: {lat: 50.025, lng: -125.251},
@@ -21,8 +23,10 @@ function mapStart() {
     const marker = new google.maps.Marker({
         position: {lat: 50.025, lng: -125.251},
         map: map,
+        visible: false,
     });
 
+    // #2.
     autocomplete.addListener("place_changed", () =>{
         infoWindow.close();
         marker.setVisible(false);
@@ -41,6 +45,26 @@ function mapStart() {
         }
         marker.setPosition(placeResult.geometry.location);
         marker.setVisible(true);
+    });
+
+    // #3.
+    const locationButton = document.getElementById("currentLocationButton");
+    locationButton.addEventListener("click", () =>{
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) =>{
+                    const pos ={
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    map.setCenter(pos);
+                    marker.setPosition(pos);
+                    marker.setVisible(true);
+                }
+            );
+        } else {
+            alert("Sorry, we've run into an error, seems like your browser doesn't support geolocation");
+        }
     });
 }
 
