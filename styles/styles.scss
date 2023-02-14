@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .bg-lightgreen{
     background: $green-light;
@@ -11,8 +12,11 @@
 }
 
 #map{
-    height: 600px;
-    width: 600px;
+    min-height: 300px;
+    min-width: 300px;
+    @include lg{
+        min-height: 600px;
+    };
 }
 
 #controlsCard{
