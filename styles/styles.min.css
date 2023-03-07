@@ -1,2 +1,2 @@
-.bg-lightgreen{background:#b2f8b2}.btn-branding{background:#b2f8b2}.btn-branding:hover{background:#8dc58d}#map{min-height:300px;min-width:300px}@media screen and (min-width: 700px){#map{min-height:600px}}#controlsCard{max-width:15rem}
+.bg-lightgreen{background:#b2f8b2}.btn-branding{background:#b2f8b2}.btn-branding:hover{background:#8dc58d}#map{min-height:300px;min-width:300px}@media screen and (min-width: 700px){#map{min-height:600px}}@media screen and (max-width: 699px){#map{min-width:100%;min-height:450px}}#controlsCard{max-width:15rem}
 /*# sourceMappingURL=styles.min.css.map */

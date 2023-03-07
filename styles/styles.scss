@@ -17,6 +17,10 @@
     @include lg{
         min-height: 600px;
     };
+    @include sm{
+        min-width: 100%;
+        min-height: 450px;
+    };
 }
 
 #controlsCard{

@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin sm{
+    @media screen and (max-width: 699px) {
+        @content;
+    }
+}
