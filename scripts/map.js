@@ -1,7 +1,9 @@
-// #1. Built with help from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
-// #2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
-// #3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
-/*
+/* 
+#1. Built with help from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
+#2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
+#3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
+    #3-a. Further adapted from the page listed above, but includes some code to display an error if the get current location fails
+
     Made by Trevor Jacob.
     The 3 Sources above were mainly used as a way for me to figure out *how* the google API works. 
     An example of my workflow would be, seeing the tutorial, seeing the end result, deciding whether I could use parts
@@ -29,7 +31,7 @@ function mapStart() {
     const autocomplete = new google.maps.places.Autocomplete(locationInput);
     autocomplete.bindTo("bounds", map);
 
-    const infoWindow = new google.maps.InfoWindow();
+    let infoWindow = new google.maps.InfoWindow();
     const infoWindowContent = document.getElementById("autocomplete-content");
     infoWindow.setContent(infoWindowContent);
 
@@ -70,13 +72,20 @@ function mapStart() {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent("You should be somewhere around here");
+                    infoWindow.open(map);
                     map.setCenter(pos);
                     marker.setPosition(pos);
                     marker.setVisible(true);
+                },
+                // #3-a.
+                () =>{
+                    infoWindow.setPosition(map.getCenter());
+                    infoWindow.setContent("Sorry, we've run into an error, please ensure that geolocation is enabled in your browser settings!");
+                    infoWindow.open(map);
                 }
             );
-        } else {
-            alert("Sorry, we've run into an error, seems like your browser doesn't support geolocation");
         }
     });
 }
