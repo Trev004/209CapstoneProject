@@ -100,8 +100,8 @@ function mapStart() {
     document.getElementById("doctors").addEventListener("click" ,() =>{
         map.setOptions({styles: filters["doctors"]});
     });
-    document.getElementById("schools").addEventListener("click" ,() =>{
-        map.setOptions({styles: filters["schools"]});
+    document.getElementById("attractions").addEventListener("click" ,() =>{
+        map.setOptions({styles: filters["attractions"]});
     });
 }
 // #4-a. 
@@ -127,13 +127,13 @@ const filters = {
             stylers: [{ visibility: "on" }],
         }
     ],
-    schools: [
+    attractions: [
         {
             featureType: "poi",
             stylers: [{ visibility: "off" }],
         },
         {
-            featureType: "poi.school",
+            featureType: "poi.attraction",
             stylers: [{ visibility: "on" }],
         }
     ],
