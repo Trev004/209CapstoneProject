@@ -91,24 +91,40 @@ function mapStart() {
         }
     });
     // #4.
-    map.setOptions({styles: styles["default"]});
+    map.setOptions({styles: styles["all"]});
 }
 // #4-a. 
 const styles = {
-    default: [],
-    hide: [
-      {
-        featureType: "poi.school",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "poi.place_of_worship",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "transit",
-        stylers: [{ visibility: "off" }],
-      },
+    all: [],
+    businesses: [
+        {
+            featureType: "poi",
+            stylers: [{ visibility: "off" }],
+        },
+        {
+            featureType: "poi.business",
+            stylers: [{ visibility: "on" }],
+        }
+    ],
+    doctors: [
+        {
+            featureType: "poi",
+            stylers: [{ visibility: "off" }],
+        },
+        {
+            featureType: "poi.medical",
+            stylers: [{ visibility: "on" }],
+        }
+    ],
+    schools: [
+        {
+            featureType: "poi",
+            stylers: [{ visibility: "off" }],
+        },
+        {
+            featureType: "poi.school",
+            stylers: [{ visibility: "on" }],
+        }
     ],
   };
 
