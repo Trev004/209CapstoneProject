@@ -3,7 +3,7 @@
 #2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
 #3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
     #3-a. Further adapted from the page listed above, but includes some code to display an error if the get current location fails
-#4. 
+#4. Modified based on: https://developers.google.com/maps/documentation/javascript/examples/hiding-features
     #4-a. featureType documentation: https://developers.google.com/maps/documentation/javascript/style-reference#style-features
 
     Made by Trevor Jacob.
@@ -91,10 +91,21 @@ function mapStart() {
         }
     });
     // #4.
-    map.setOptions({styles: styles["all"]});
+    document.getElementById("all").addEventListener("click" ,() =>{
+        map.setOptions({styles: filters["all"]});
+    });
+    document.getElementById("businesses").addEventListener("click" ,() =>{
+        map.setOptions({styles: filters["businesses"]});
+    });
+    document.getElementById("doctors").addEventListener("click" ,() =>{
+        map.setOptions({styles: filters["doctors"]});
+    });
+    document.getElementById("schools").addEventListener("click" ,() =>{
+        map.setOptions({styles: filters["schools"]});
+    });
 }
 // #4-a. 
-const styles = {
+const filters = {
     all: [],
     businesses: [
         {
