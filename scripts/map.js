@@ -3,6 +3,8 @@
 #2. With the searching adapted from :https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete#maps_places_autocomplete-javascript
 #3. Current Location adapted from: https://developers.google.com/maps/documentation/javascript/geolocation
     #3-a. Further adapted from the page listed above, but includes some code to display an error if the get current location fails
+#4. 
+    #4-a. featureType documentation: https://developers.google.com/maps/documentation/javascript/style-reference#style-features
 
     Made by Trevor Jacob.
     The 3 Sources above were mainly used as a way for me to figure out *how* the google API works. 
@@ -88,6 +90,26 @@ function mapStart() {
             );
         }
     });
+    // #4.
+    map.setOptions({styles: styles["default"]});
 }
+// #4-a. 
+const styles = {
+    default: [],
+    hide: [
+      {
+        featureType: "poi.school",
+        stylers: [{ visibility: "off" }],
+      },
+      {
+        featureType: "poi.place_of_worship",
+        stylers: [{ visibility: "off" }],
+      },
+      {
+        featureType: "transit",
+        stylers: [{ visibility: "off" }],
+      },
+    ],
+  };
 
 window.mapStart = mapStart;
