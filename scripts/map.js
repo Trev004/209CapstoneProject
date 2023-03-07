@@ -138,5 +138,4 @@ const filters = {
         }
     ],
   };
-
 window.mapStart = mapStart;
