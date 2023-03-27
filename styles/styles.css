@@ -8,6 +8,14 @@
 .btn-branding:hover {
   background: #8dc58d;
 }
+.btn-branding-border {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #8dc58d;
+}
+.btn-branding-border:hover {
+  border-color: #b2f8b2;
+}
 
 #map {
   min-height: 300px;

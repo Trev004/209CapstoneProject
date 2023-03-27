@@ -22,7 +22,7 @@ function mapStart() {
         mapTypeControl: false,
     });
 
-    const cardControls = document.getElementById("collapseableControls");
+    const cardControls = document.getElementById("controlsContainer");
     if (window.innerWidth >= 700) {
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(cardControls);
     } else{

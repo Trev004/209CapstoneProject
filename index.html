@@ -25,34 +25,36 @@
     </div>
 
     <div class="container mb-5">
-      <button class="btn btn-branding" type="button" data-bs-toggle="collapse" data-bs-target="#collapseableControls">Show Controls</button>
-      <div id="collapseableControls">
-        <div class="card border-primary mt-1 mx-1 fs-6" id="controlsCard">
-          <div class="card-header">Location Search</div>
-          <div class="card-body">
-            <button class="btn btn-branding mb-2" id="currentLocationButton">Find my current location</button>
-            <form>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="locationType" id="all" checked>
-                <label class="form-check-label" for="all">All</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="locationType" id="businesses">
-                <label class="form-check-label" for="businesses">Businesses</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="locationType" id="doctors">
-                <label class="form-check-label" for="doctors">Doctors</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="locationType" id="attractions">
-                <label class="form-check-label" for="attractions">Attractions</label>
-              </div>
-            </form>
-            <form>
-              <label for="locationInput">Enter Location Here!</label>
-              <input type="text" class="form-control" id="locationInput" placeholder="Courtenay">
-            </form>
+      <div id="controlsContainer">
+        <button class="btn btn-branding btn-branding-border my-1 mx-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseableControls" aria-expanded="true">Toggle Controls</button>
+        <div id="collapseableControls" class="collapse">
+          <div class="card border-primary mt-1 mx-1 fs-6" id="controlsCard">
+            <div class="card-header">Location Search</div>
+            <div class="card-body">
+              <button class="btn btn-branding mb-2" id="currentLocationButton">Find my current location</button>
+              <form>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="locationType" id="all" checked>
+                  <label class="form-check-label" for="all">All</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="locationType" id="businesses">
+                  <label class="form-check-label" for="businesses">Businesses</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="locationType" id="doctors">
+                  <label class="form-check-label" for="doctors">Doctors</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="locationType" id="attractions">
+                  <label class="form-check-label" for="attractions">Attractions</label>
+                </div>
+              </form>
+              <form>
+                <label for="locationInput">Enter Location Here!</label>
+                <input type="text" class="form-control" id="locationInput" placeholder="Courtenay">
+              </form>
+            </div>
           </div>
         </div>
       </div>
