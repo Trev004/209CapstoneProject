@@ -19,9 +19,8 @@
     </nav>
 
     <div class="container text-center pt-5">
-      <h1 class="display-1 pt-4 pt-sm-3">Same City Shopper</h1>
-      <p class="fs-4">Welcome to Same City Shopper! The page that's here to help you find your local shops!</p>
-      <p class="fs-5">The goal of Same City Shopper(SCS) is to help you plan your shopping trips, and support businesses near you.</p>
+      <h1 class="display-1 pt-4 pt-sm-3 pb-2" >Same City Shopper</h1>
+      <p class="fs-5">Hover <a href="#" class="fw-semibold text-decoration-none" data-bs-custom-class="wide-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="Welcome to Same City Shopper! <br> The page that's here to help you find your local shops, plan your shopping trips, and support businesses near you!">here</a> for more info!</p>
     </div>
 
     <div class="container mb-5">
@@ -79,5 +78,9 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVF_IKXu3VYMlQMs-UtOoJ3ZdlqnclN8A&callback=mapStart&libraries=places&v=weekly"
       defer
     ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 </html>

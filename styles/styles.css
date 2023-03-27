@@ -17,6 +17,17 @@
   border-color: #b2f8b2;
 }
 
+@media screen and (min-width: 700px) {
+  .wide-tooltip {
+    --bs-tooltip-max-width: 400px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .wide-tooltip {
+    --bs-tooltip-max-width: 250px;
+  }
+}
+
 input[type=radio] {
   transform: scale(1.3);
 }

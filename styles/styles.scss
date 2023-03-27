@@ -18,6 +18,15 @@
     }
 }
 
+.wide-tooltip{
+    @include lg{
+        --bs-tooltip-max-width: 400px;
+    };
+    @include sm{
+        --bs-tooltip-max-width: 250px;
+    };
+}
+
 input[type=radio]{
     transform: scale(1.3);
 }
