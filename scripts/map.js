@@ -23,11 +23,7 @@ function mapStart() {
     });
 
     const cardControls = document.getElementById("controlsContainer");
-    if (window.innerWidth >= 700) {
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(cardControls);
-    } else{
-        cardControls.classList.add("mx-auto", "mb-5");
-    }
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(cardControls);
 
     const locationInput = document.getElementById("locationInput");
     const autocomplete = new google.maps.places.Autocomplete(locationInput);
