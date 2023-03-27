@@ -1,6 +1,5 @@
 @use 'variables' as *;
 @use 'mixins' as *;
-
 .bg-lightgreen{
     background: $green-light;
 }
@@ -17,6 +16,10 @@
             border-color: $green-light;
         }
     }
+}
+
+input[type=radio]{
+    transform: scale(1.3);
 }
 
 #map{
