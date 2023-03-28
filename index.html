@@ -32,22 +32,25 @@
             <div class="card-body">
               <button class="btn btn-branding mb-2" id="currentLocationButton">Find my current location</button>
               <form>
-                <div class="form-check mb-2 mt-1">
-                  <input class="form-check-input" type="radio" name="locationType" id="all" checked>
-                  <label class="form-check-label fs-5" for="all">All</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="radio" name="locationType" id="businesses">
-                  <label class="form-check-label fs-5" for="businesses">Businesses</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="radio" name="locationType" id="doctors">
-                  <label class="form-check-label fs-5" for="doctors">Doctors</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="radio" name="locationType" id="attractions">
-                  <label class="form-check-label fs-5" for="attractions">Attractions</label>
-                </div>
+                <fieldset>
+                  <legend class="fs-5">Filter Location Type</legend>
+                  <div class="form-check mb-2 mt-1">
+                    <input class="form-check-input" type="radio" name="locationType" id="all" checked>
+                    <label class="form-check-label fs-5" for="all">All</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="locationType" id="businesses">
+                    <label class="form-check-label fs-5" for="businesses">Businesses</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="locationType" id="doctors">
+                    <label class="form-check-label fs-5" for="doctors">Doctors</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="locationType" id="attractions">
+                    <label class="form-check-label fs-5" for="attractions">Attractions</label>
+                  </div>
+                </fieldset>
               </form>
               <form>
                 <label for="locationInput">Enter Location Here!</label>
